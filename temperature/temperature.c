@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 /*
-* 打印摄氏度与华氏度数对照表
-*/
-main()
+ * 打印摄氏度与华氏度数对照表
+ */
+main() 
 {
-	int fahr, celsius;
-	int lower, upper, step;
+	float fahr, celsius;
+	float lower, upper, step;
+	float sheshi, huashi;
 
 	// 温度表下限
 	lower = 0;
@@ -16,12 +17,22 @@ main()
 	step = 20;
 
 	fahr = lower;
+	sheshi = lower;
 
-	while (fahr <= upper)
+	printf("%3s\t%6s\n", "华氏", "摄氏");
+	while (fahr <= upper) 
 	{
-		celsius = 5 * (fahr - 32) / 9;
-		printf("%d\t%d\n", fahr, celsius);
+		celsius = 5.0 * (fahr - 32.0) / 9.0;
+		printf("%3.0f\t%6.1f\n", fahr, celsius);
 		fahr = fahr + step;
-		system("pause");
 	}
+	printf("---------------------\n");
+	printf("%3s\t%6s\n", "华氏", "摄氏");
+	while (sheshi <= upper)
+	{
+		huashi = sheshi * 9.0 / 5.0 + 32.0;
+		printf("%3.0f\t%6.1f\n", huashi, sheshi);
+		sheshi = sheshi + step;
+	}
+	system("pause");
 }
