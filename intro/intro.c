@@ -1,13 +1,17 @@
 #include<stdio.h>
 
+void butler(void);
 int main(void) 
 {
-	int num;
-	num = 1;
+	printf("I will summon the butler  function.\n");
+	butler();
+	printf("Yes, Bring me some tea ande writeable DVDs.\n");
 
-	printf("I am a simple");
-	printf("computer. \n");
-	printf("My favorite number is %d because it is first. \n", num);
-	getchar();
+	system("pause");
 	return 0;
+}
+
+void butler(void)
+{
+	printf("You rang, sir?\n");
 }
