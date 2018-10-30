@@ -22,3 +22,8 @@ int main(void)
 	
 	return 0; 
 }
+
+/*
+	1. float类型可以储存带小数的数字
+	2.  
+*/
